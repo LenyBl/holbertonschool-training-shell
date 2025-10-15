@@ -1,0 +1,16 @@
+#!/bin/bash
+
+content='cat to_do_list'
+
+echo -e "Choose an option :\n"
+echo -e "\tadd <description>"
+echo -e "\tlist"
+echo -e "\tdone <number_of_task>"
+echo -e "\tdelete <number_of_task>\n"
+
+read -p "> " option
+
+case option in 
+    add*(
+        
+    )
