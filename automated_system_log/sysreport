@@ -1,0 +1,17 @@
+#!/bin/bash
+
+current_date_time=$(date)
+user=$USER
+disk_use=$(df -h /)
+current_memory_available=$(free -m)
+system_uptime=$(uptime)
+
+if [ -f system_report ]; then 
+
+    echo -e "$current_date_time\n$user\n$disk_use\n$current_memory_available\n$system_uptime\n-----------------------------------" >> system_report 
+
+else 
+
+    echo -e "$current_date_time\n$user\n$disk_use\n$current_memory_available\n$system_uptime\n-----------------------------------" > system_report 
+
+fi
