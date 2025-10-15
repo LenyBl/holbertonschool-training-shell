@@ -1,0 +1,6 @@
+#!/bin/bash
+
+current_date=$(date '+%Y-%m-%d');
+mkdir $1;
+cd $1;
+echo "# $1 $current_date" >> README.md;
