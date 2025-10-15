@@ -19,4 +19,3 @@ Ce script Bash permet de créer un nouveau dossier pour un projet, de s'y dépla
 ```bash
 ./create_project.sh <nom_du_projet>
 
----
