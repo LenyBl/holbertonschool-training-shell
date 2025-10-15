@@ -1,0 +1,39 @@
+#!/bin/bash
+
+nameFile="$1"
+
+if [ -f "$nameFile" ]; then
+    contentFile=$(cat "$nameFile")
+    
+    while [ "$option" != "--upper" ] && [ "$option" != "--lower" ] && [ "$option" != "--reverse" ];
+    do
+        echo -e "Choice an option :\n"
+        echo -e "--upper"
+        echo -e "--lower"
+        echo -e "--reverse\n"
+        
+        read -p ">" option
+    done
+    
+    if [ "$option" == "--upper" ]; then
+        
+        newNameFile="${nameFile}_upper"
+        echo " ${contentFile^^} " > "$newNameFile"
+        
+        elif [ "$option" == "--lower" ]; then
+        
+        newNameFile="${nameFile}_lower"
+        echo " ${contentFile,,} " > "$newNameFile"
+        
+    else
+        
+        newNameFile="${nameFile}_reverse"
+        echo "$contentFile" | rev > "$newNameFile"
+        
+    fi
+    
+    
+else
+    echo "$nameFile doesn't exist"
+fi
+
