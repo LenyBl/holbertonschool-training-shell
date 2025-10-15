@@ -18,3 +18,5 @@ Ce script Bash permet de créer un nouveau dossier pour un projet, de s'y dépla
 ### Syntaxe
 ```bash
 ./create_project.sh <nom_du_projet>
+
+---
